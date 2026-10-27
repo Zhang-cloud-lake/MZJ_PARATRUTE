@@ -1,0 +1,47 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Fixed Frame: odom
+    Background Color: 35; 35; 35
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Ground
+      Enabled: true
+      Cell Size: 5
+      Plane Cell Count: 80
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+    - Class: rviz_default_plugins/Path
+      Name: Planned descent
+      Enabled: true
+      Topic:
+        Value: /planning/path
+        Reliability Policy: Reliable
+      Color: 0; 255; 0
+    - Class: rviz_default_plugins/Odometry
+      Name: State
+      Enabled: true
+      Topic:
+        Value: /state/odom
+        Reliability Policy: Reliable
+    - Class: rviz_default_plugins/RobotModel
+      Name: Parafoil
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /robot_description
+        Durability Policy: Transient Local
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 160
+      Pitch: 0.6
+      Yaw: 0.8
+      Focal Point:
+        X: 60
+        Y: 15
+        Z: 10

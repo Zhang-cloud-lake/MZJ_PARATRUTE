@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>mzj_bringup</name><version>0.1.0</version>
+  <description>Simulation and guarded hardware launch configuration</description>
+  <maintainer email="maintainer@example.com">MZJ maintainers</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>mzj_description</exec_depend>
+  <exec_depend>mzj_planning</exec_depend>
+  <exec_depend>mzj_control</exec_depend>
+  <exec_depend>mzj_simulator</exec_depend>
+  <exec_depend>mzj_perception</exec_depend>
+  <exec_depend>mzj_localization</exec_depend>
+  <exec_depend>mzj_system</exec_depend>
+  <exec_depend>mzj_mcu_bridge</exec_depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

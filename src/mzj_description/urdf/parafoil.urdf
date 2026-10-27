@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot name="mzj_parafoil">
+  <link name="base_link">
+    <visual><geometry><box size="0.5 0.3 0.2"/></geometry>
+      <material name="payload"><color rgba="0.2 0.3 0.8 1"/></material>
+    </visual>
+  </link>
+  <link name="canopy_link">
+    <visual><geometry><box size="1 3 0.15"/></geometry>
+      <material name="canopy"><color rgba="1 0.5 0.1 1"/></material>
+    </visual>
+  </link>
+  <joint name="canopy_joint" type="fixed">
+    <parent link="base_link"/><child link="canopy_link"/><origin xyz="0 0 1.5"/>
+  </joint>
+  <link name="camera_link"/>
+  <joint name="camera_joint" type="fixed">
+    <parent link="base_link"/><child link="camera_link"/>
+    <origin xyz="0.1 0 -0.1" rpy="0 1.57079632679 0"/>
+  </joint>
+  <link name="camera_optical_frame"/>
+  <joint name="camera_optical_joint" type="fixed">
+    <parent link="camera_link"/><child link="camera_optical_frame"/>
+    <origin rpy="-1.57079632679 0 -1.57079632679"/>
+  </joint>
+  <link name="imu_link"/>
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/><child link="imu_link"/>
+  </joint>
+</robot>

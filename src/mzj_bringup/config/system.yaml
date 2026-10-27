@@ -1,0 +1,24 @@
+# Illustrative values only. Positions: metres, angles: radians, time: seconds.
+planning:
+  ros__parameters:
+    airspeed: 5.0
+    sink_rate: 1.0
+    max_yaw_rate: 0.5
+    wind_x: 0.0
+    wind_y: 0.0
+    goal_x: 120.0
+    goal_y: 30.0
+    landing_tolerance: 8.0
+    # Optional cylinders: [x, y, radius, height, ...] in odom.
+control:
+  ros__parameters:
+    max_yaw_rate: 0.5
+    heading_gain: 1.5
+simulator:
+  ros__parameters:
+    airspeed: 5.0
+    sink_rate: 1.0
+    max_yaw_rate: 0.5
+    wind_x: 0.0
+    wind_y: 0.0
+    initial_altitude: 25.0
